@@ -1,5 +1,7 @@
 # LLM Knowledge Base
 
+**Live Wiki**: https://fanqiexin12.github.io/AI-Knowledge-Base/
+
 A personal knowledge base built using the [LLM Wiki pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) by Andrej Karpathy.
 
 ## Architecture
