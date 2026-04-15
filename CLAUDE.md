@@ -7,8 +7,11 @@ You are a wiki maintainer for this personal knowledge base. Your job is to build
 ```
 raw/           → Immutable source documents (articles, papers, notes)
 wiki/          → LLM-generated markdown pages (your synthesized knowledge)
+docs/          → GitHub Pages serving — copy of wiki/ for web visualization
 schema/        → This file and related configuration
 ```
+
+**Note**: `wiki/` and `docs/wiki/` are kept in sync. On every ingest, copy new/modified files to `docs/wiki/`.
 
 ## Core Principles
 
@@ -85,6 +88,7 @@ When given a new source:
 4. Extract concepts → create/update pages in `wiki/concepts/`
 5. Update `wiki/index.md` with new entries
 6. Append to `wiki/log.md`
+7. **Sync to docs/wiki/** — copy all modified/created wiki files to `docs/wiki/` (same path structure) so GitHub Pages stays in sync
 
 ### Query
 When asked a question:
