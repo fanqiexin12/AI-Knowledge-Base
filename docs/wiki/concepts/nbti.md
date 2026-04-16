@@ -3,9 +3,9 @@ title: "NBTI (Negative Bias Temperature Instability)"
 type: concept
 tags: [reliability, degradation, p-fet, semiconductor, bti]
 created: 2026-04-14
-updated: 2026-04-14
-sources: ["raw/sources/Impact_of_Material_Variability_on_the_Reliability_of_Nanosheet_FETs.pdf", "raw/sources/Experimental_Study_on_NBTI_Degradation_Behaviors_in_Si_pMOSFETs_Under_Compressive_and_Tensile_Strains.pdf", "raw/sources/Delay_effects_and_frequency_dependence_of_NBTI_with_sub-microsecond_measurements.pdf", "raw/sources/Reliability_analysis_of_CMOS_inverter_subjected_to_AC_amp_DC_NBTI_stresses.pdf"]
-related: [["concepts/nanosheet-fet", "Nanosheet FET"], ["concepts/pbti", "PBTI"], ["concepts/strain-engineering", "Strain Engineering"], ["concepts/nbti-frequency-effect", "NBTI Frequency Effect"], ["concepts/ac-nbti", "AC NBTI"], ["concepts/soi-mosfet", "SOI MOSFET"]]
+updated: 2026-04-16
+sources: ["raw/sources/Impact_of_Material_Variability_on_the_Reliability_of_Nanosheet_FETs.pdf", "raw/sources/Experimental_Study_on_NBTI_Degradation_Behaviors_in_Si_pMOSFETs_Under_Compressive_and_Tensile_Strains.pdf", "raw/sources/Delay_effects_and_frequency_dependence_of_NBTI_with_sub-microsecond_measurements.pdf", "raw/sources/Reliability_analysis_of_CMOS_inverter_subjected_to_AC_amp_DC_NBTI_stresses.pdf", "raw/sources/Analysis_and_impacts_of_Negative_Bias_Temperature_Instability_NBTI.pdf", "raw/sources/A_new_oxide_trap-assisted_NBTI_degradation_model.pdf", "raw/sources/A_study_of_fluorine_dose_and_implant_energy_to_the_NBTI_upon_p_implant_sequence.pdf", "raw/sources/A_Comprehensive_Review_of_DRAM_NBTI_Issues_and_Solutions.pdf"]
+related: [["concepts/nanosheet-fet", "Nanosheet FET"], ["concepts/pbti", "PBTI"], ["concepts/strain-engineering", "Strain Engineering"], ["concepts/nbti-frequency-effect", "NBTI Frequency Effect"], ["concepts/ac-nbti", "AC NBTI"], ["concepts/soi-mosfet", "SOI MOSFET"], ["concepts/dram", "DRAM"]]
 ---
 
 # NBTI (Negative Bias Temperature Instability)
@@ -59,6 +59,30 @@ NBTI 是 p-FET 在**负栅极偏置 + 高温**条件下发生的时变可靠性 
 - PD-SOI floating body 导致 NBTI 退化有历史记忆
 - **负偏置存储**（Vgs < 0 during interval）→ 加速 NBTI 退化
 - **零偏置存储**（Vgs = 0 during interval）→ NBTI 部分恢复
+
+## Oxide Trap-Assisted Degradation Model
+
+- 传统观点：NBTI 主要由界面态（Nit）主导
+- 新发现：**氧化层陷阱（Not）**也显著贡献退化
+- 陷阱协助机制：空穴在应力阶段被氧化层陷阱捕获，弛豫阶段去捕获
+- **Time-dependent decay**：遵循 stretched exponential 行为
+- 该模型能**定量预测频率效应**
+
+## Circuit-Level Impacts
+
+| Circuit | NBTI Impact |
+|---------|-------------|
+| **SRAM** | SNM 退化，读取/写入裕量下降 |
+| **Ring Oscillator** | 频率下降 2-5%（10年），可用作 on-chip monitor |
+| **Sense Amplifier** | Voffset 增加，读取灵敏度退化 |
+| **DRAM** | retention time 缩短，需要更频繁 refresh |
+
+## DRAM NBTI
+
+- DRAM cell 使用 pMOS access transistor，NBTI 导致 Vth 正漂移
+- **Retention time degradation**：64ms → 32ms 或更短
+- Write margin 和 read disturb 也会退化
+- 缓解方法：adaptive refresh、ECC、wear leveling
 
 ## Related
 - [[concepts/nanosheet-fet]] — Nanosheet 架构对此 degradation 的敏感性

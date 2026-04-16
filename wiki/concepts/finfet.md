@@ -1,11 +1,11 @@
 ---
 title: "FinFET"
 type: concept
-tags: [finfet, mosfet, 3d-gate, multi-gate, semiconductor, advanced-nodes, short-channel-effect]
+tags: [finfet, mugfet, mosfet, 3d-gate, multi-gate, semiconductor, advanced-nodes, short-channel-effect, fin-width]
 created: 2026-04-14
-updated: 2026-04-14
-sources: ["raw/sources/A_NBTI_tolerant_technique_for_FinFET_based_wide_fan-in_dynamic_logic.pdf"]
-related: [["concepts/nbti", "NBTI"], ["concepts/nanosheet-fet", "Nanosheet FET"]]
+updated: 2026-04-16
+sources: ["raw/sources/A_NBTI_tolerant_technique_for_FinFET_based_wide_fan-in_dynamic_logic.pdf", "raw/sources/A_Guideline_for_the_Optimum_Fin_Width_Considering_Hot-Carrier_and_NBTI_Degradation_in_MuGFETs.pdf"]
+related: [["concepts/nbti", "NBTI"], ["concepts/hci", "HCI"], ["concepts/nanosheet-fet", "Nanosheet FET"]]
 ---
 
 # FinFET
@@ -47,6 +47,18 @@ related: [["concepts/nbti", "NBTI"], ["concepts/nanosheet-fet", "Nanosheet FET"]
 - **3D 结构**：fin 侧壁和顶部都受栅极控制
 - **NBTI 效应**：fin 侧壁/顶部的 interface quality 可能不同
 - **Gate-all-around (GAA)** 是 FinFET 的进化方向 → 4 面栅极控制
+
+## Fin Width Optimization (MuGFET)
+
+| Fin Width | NBTI | HCI | Optimal For |
+|-----------|------|-----|-------------|
+| **< 10nm** | Low | High | HCI-dominated |
+| **10-15nm** | Medium | Medium | **Balanced** |
+| **> 20nm** | High | Low | NBTI-dominated |
+
+- **最优 Fin Width：10-15nm** — HCI 和 NBTI 最佳平衡
+- Narrow fin：peak electric field 高 → HCI 严重
+- Wide fin：interface volume fraction 大 → NBTI 严重
 
 ## Related
 - [[concepts/nbti]] — NBTI

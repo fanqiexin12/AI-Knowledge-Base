@@ -34,6 +34,18 @@ Chronological record of wiki operations. Format: `## [YYYY-MM-DD] operation | de
 - Files touched: sources/nbti-frequency-dependence, sources/cmos-inverter-nbti-ac-dc, concepts/nbti-frequency-effect, concepts/ac-nbti, concepts/nbti (updated), index.md, log.md
 - Key findings: NBTI frequency dependence: f > 1 MHz negligible; DC is worst case; AC NBTI: PMOS NBTI + NMOS PBTI both contribute
 
+## [2026-04-16] ingest | 5 new papers
+- Action: Created 5 source summaries, updated NBTI and FinFET concept pages, created new DRAM concept
+- New sources: analysis-and-impacts-of-nbti, fluorine-dose-energy-nbti-pimplant, oxide-trap-assisted-nbti-model, fin-width-hc-nbti-mugfet, dram-nbti-review
+- New concepts: dram
+- Updated concepts: nbti (added oxide trap model, DRAM NBTI, circuit impacts), finfet (added fin width optimization)
+- Key topics:
+  - NBTI circuit impacts: SRAM, Ring Oscillator, Sense Amplifier, DRAM retention
+  - Oxide trap-assisted degradation model (stretched exponential)
+  - F dose/energy optimization for NBTI mitigation
+  - MuGFET fin width tradeoff: HCI vs NBTI
+  - DRAM NBTI: retention time degradation, adaptive refresh
+
 ## [2026-04-15] batch-ingest | 16 new papers
 - Action: Batch processed 16 new papers
 - New sources: 15 new source summaries created

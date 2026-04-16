@@ -10,17 +10,18 @@ This wiki follows the three-layer architecture: **raw sources** (immutable) → 
 - [[entities/nb3sn]] — Nb₃Sn（铌三锡），Tc ≈ 18K，Hc2 ≈ 25-30T，14T+ MRI 磁体用高场超导体 — sources: 1
 - [[entities/nbti]] — NbTi（铌钛合金），Tc ≈ 9.5K，Hc2 ≈ 14T，MRI/NMR 磁体最广泛使用的超导体 — sources: 3
 
-## Concepts (20)
+## Concepts (21)
 - [[concepts/ac-nbti]] — AC NBTI：PMOS NBTI + NMOS PBTI 共同作用，VM 向 NMOS 侧漂移，duty cycle 影响退化分布 — sources: 2
 - [[concepts/circuit-aging]] — 电路老化：NBTI/PBTI/HCI/EM 导致 timing degradation，10年退化可达 10-20% — sources: 3
+- [[concepts/dram]] — DRAM（动态随机存取存储器）：1T1C 结构，NBTI 导致 retention time 退化，需 adaptive refresh — sources: 1
 - [[concepts/em-tdds]] — EM（电迁移）和 TDDB（时变介质击穿）：先进节点互联两大失效机制 — sources: 2
 - [[concepts/esd]] — ESD（静电放电）保护：ESD 与 NBTI/HCI 相互作用，复合失效模式 — sources: 1
-- [[concepts/finfet]] — FinFET（鳍式场效应晶体管）：3D 栅极结构，3面包覆沟道，22nm-7nm 主流架构 — sources: 1
+- [[concepts/finfet]] — FinFET（鳍式场效应晶体管）：3D 栅极结构，3面包覆沟道，22nm-7nm 主流架构；Fin Width 10-15nm 为 HCI/NBTI 最佳平衡 — sources: 2
 - [[concepts/gan-hemt]] — GaN HEMT（氮化镓高电子迁移率晶体管）：2DEG 沟道，宽禁带，高压/高温/高频应用 — sources: 1
 - [[concepts/hci]] — HCI（热载流子注入）：高 Vds 下热载流子注入氧化层，PD-SOI 中比 Bulk 更严重 — sources: 1
 - [[concepts/interconnect-reliability]] — 互联可靠性：EM/TDDB/应力迁移，7nm 节点电流密度 >10 MA/cm² — sources: 2
 - [[concepts/iter]] — ITER（国际热核聚变实验堆）：全球最大聚变项目，Q=10，tokamak 装置，超导磁体系统 — sources: 1
-- [[concepts/nbti]] — NBTI（负偏置温度不稳定性）：p-FET 负偏置高温退化；压应变恶化；DC > AC > 高频；SOI 有 history effect；GaN 有 free holes 机制 — sources: 13
+- [[concepts/nbti]] — NBTI（负偏置温度不稳定性）：p-FET 负偏置高温退化；压应变恶化；DC > AC > 高频；SOI 有 history effect；GaN 有 free holes 机制；DRAM retention time 退化；oxide trap-assisted 模型 — sources: 17
 - [[concepts/nbti-frequency-effect]] — NBTI 频率效应：频率越高 NBTI 越弱（recovery 充足），f > 1 MHz 可忽略；DC 是 worst case — sources: 2
 - [[concepts/nbti-mitigation]] — NBTI 缓解技术：Gate Merging、Fluorine 注入、Adaptive Body Bias、Input Vector Control — sources: 3
 - [[concepts/nanosheet-fet]] — Nanosheet FET (GAA) 架构：3nm/2nm 节点主流，堆叠多层水平纳米片，4面栅极环绕 — sources: 2
@@ -33,15 +34,19 @@ This wiki follows the three-layer architecture: **raw sources** (immutable) → 
 - [[concepts/variability-sources]] — 先进制程器件变异性来源：WFV/LER/MGG/厚度波动，RDD 在 7nm 节点显著 — sources: 2
 - [[concepts/wide-bandgap]] — 宽禁带半导体：GaN/SiC，带隙 3+ eV，高压/高温/高频应用 — sources: 1
 
-## Sources (21)
+## Sources (26)
 - [[sources/7nm-yield-reliability-challenges]] — 7nm 及以下良率和可靠性挑战：RDD/WFV/variability/EUV/EM 等多重挑战 — date: 2026-04-14
 - [[sources/9.2t-nbti-mri-magnet-design]] — 9.2T NbTi MRI 磁体设计研究：多线圈结构，±50ppm 均匀度，600mm 室温孔径 — date: 2026-04-14
 - [[sources/ac-nbti-coarse-graining-model]] — AC-NBTI 模型粗粒化方法：多时间尺度问题聚合快动力学变量，加速电路仿真 — date: 2026-04-14
+- [[sources/analysis-and-impacts-of-nbti]] — NBTI 电路级影响综述：SRAM SNM 退化、Ring Oscillator 频率下降、 Sense Amplifier Voffset 增加、DRAM retention time 缩短 — date: 2026-04-16
 - [[sources/bti-sram-sense-amplifier]] — BTI 对 SRAM 灵敏放大器影响：Voffset 增加，SNM 退化 20-30%，read failure 风险 — date: 2026-04-14
 - [[sources/cmos-inverter-nbti-ac-dc]] — CMOS inverter AC/DC NBTI 可靠性：DC 下 PMOS NBTI 主导；AC 下 PMOS NBTI + NMOS PBTI 共同作用 — date: 2026-04-14
+- [[sources/dram-nbti-review]] — DRAM NBTI 综述：retention time 退化、refresh 频率增加、write margin 退化；adaptive refresh、ECC 等缓解方案 — date: 2026-04-16
 - [[sources/euv-interconnect-reliability-7nm]] — EUV 互联可靠性：Cu/Co/Ru 材料，J > 10 MA/cm²，EM/TDDB 成为主要失效机制 — date: 2026-04-14
 - [[sources/esd-nbti-hci-interaction-65nm]] — ESD 与 NBTI/HCI 相互作用：ESD 加速老化，老化后 ESD 阈值降低，复合失效模式 — date: 2026-04-14
 - [[sources/finfet-nbti-tolerant-wide-fan-in-dynamic-logic]] — FinFET 宽扇入动态逻辑 NBTI tolerant 技术：Gate Merging 消除关键内部节点 — date: 2026-04-14
+- [[sources/fin-width-hc-nbti-mugfet]] — MuGFET Fin Width 优化指南：10-15nm 为 HCI/NBTI 最佳平衡；narrow fin HCI 严重，wide fin NBTI 严重 — date: 2026-04-16
+- [[sources/fluorine-dose-energy-nbti-pimplant]] — 氟离子 dose/能量对 NBTI 的影响：F dose 5×10¹⁴-1×10¹⁵ cm⁻² 最佳；p-implant 顺序影响 F 保留率 — date: 2026-04-16
 - [[sources/gate-merging-nbti-mitigation]] — Gate Merging NBTI 缓解方法：合并门电路消除 critical internal node，减少 timing degradation 30-50% — date: 2026-04-14
 - [[sources/gan-hemt-nbti-free-holes]] — GaN-on-Si MOS-HEMT nBTI 机制：free holes（空穴气）导致 2DEG 退化，与 Si NBTI 机制不同 — date: 2026-04-14
 - [[sources/impact-of-material-variability-nanosheet-fets]] — Nanosheet FET 可靠性仿真：variability 对 BTI 退化影响，WFV 是最大变异性来源 — date: 2026-04-14
@@ -58,6 +63,7 @@ This wiki follows the three-layer architecture: **raw sources** (immutable) → 
 - [[sources/nbti-two-stage-model-states-kinetics]] — Two-Stage NBTI 模型：interface trap creation + hole trapping，states kinetics 研究 — date: 2026-04-14
 - [[sources/nitrogen-enhanced-nbti-universal-model]] — 氮增强 NBTI 效应：N clustering 形成 deep traps，universal prediction model 预测 — date: 2026-04-14
 - [[sources/on-chip-nbti-tracking-monitor]] — 简单片上 NBTI 监测器：Ring oscillator 频率追踪，实时监测 IC 老化 — date: 2026-04-14
+- [[sources/oxide-trap-assisted-nbti-model]] — Oxide trap-assisted NBTI 模型：氧化层陷阱贡献显著；stretched exponential recovery；定量预测频率效应 — date: 2026-04-16
 - [[sources/soi-floating-body-nbti-hci]] — PD-SOI floating-body 效应：NBTI 有 history effect，HCI 比 Bulk 更严重 — date: 2026-04-14
 - [[sources/superconducting-connections-nbti-nbn]] — NbTi 超导连接：NbN paste + HNA 处理，Ic 从 10A 提升 — date: 2026-04-14
 
@@ -65,4 +71,5 @@ This wiki follows the three-layer architecture: **raw sources** (immutable) → 
 _No syntheses yet. Ask questions to generate analyses._
 
 ## Recent Updates
+- **2026-04-16**: 5 new papers ingested — NBTI circuit impacts, oxide trap model, F dose/energy optimization, MuGFET fin width guideline, DRAM NBTI review. Updated NBTI/FinFET concept pages. New concept: DRAM.
 - **2026-04-14**: Batch ingest 16 new papers (NBTI mechanisms, circuits, models, mitigation; GaN HEMT; interconnect reliability; superconductivity; SRAM; aging sensors; ITER)
