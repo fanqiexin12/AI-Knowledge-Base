@@ -3,8 +3,8 @@ title: "SOI MOSFET"
 type: concept
 tags: [soi, mosfet, floating-body, pd-soi, fd-soi, semiconductor, reliability]
 created: 2026-04-14
-updated: 2026-04-14
-sources: ["raw/sources/Effect_of_Floating-Body_and_Stress_Bias_on_NBTI_and_HCI_on_65-nm_SOI_pMOSFETs.pdf"]
+updated: 2026-04-16
+sources: ["raw/sources/Effect_of_Floating-Body_and_Stress_Bias_on_NBTI_and_HCI_on_65-nm_SOI_pMOSFETs.pdf", "raw/sources/Assessment_of_NBTI_in_Presence_of_Self-Heating_in_High-_k_SOI_FinFETs.pdf"]
 related: [["concepts/hci", "HCI"], ["concepts/nbti", "NBTI"], ["concepts/nanosheet-fet", "Nanosheet FET"]]
 ---
 
@@ -65,6 +65,13 @@ related: [["concepts/hci", "HCI"], ["concepts/nbti", "NBTI"], ["concepts/nanoshe
   - 负偏置存储（Vgs < 0）→ NBTI 加重
   - 零偏置存储 → NBTI 部分恢复
 - **与 Bulk 不同**：Bulk 的 NBTI 测量结果更稳定，不依赖历史
+
+### Self-Heating in SOI
+- **BOX 层热阻高**：热量难以散去
+- **温度升高 20-40°C** at high power states
+- 温度升高加速 NBTI 动力学（Arrhenius 关系）
+- High-k 介质 + SOI 结构使 NBTI 更敏感
+- Self-heating 同时影响 recovery 动力学
 
 ### HCI in SOI (PD-SOI)
 - **比 Bulk 更严重**：

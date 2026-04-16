@@ -4,7 +4,8 @@ type: concept
 tags: [reliability, degradation, p-fet, semiconductor, bti]
 created: 2026-04-14
 updated: 2026-04-16
-sources: ["raw/sources/Impact_of_Material_Variability_on_the_Reliability_of_Nanosheet_FETs.pdf", "raw/sources/Experimental_Study_on_NBTI_Degradation_Behaviors_in_Si_pMOSFETs_Under_Compressive_and_Tensile_Strains.pdf", "raw/sources/Delay_effects_and_frequency_dependence_of_NBTI_with_sub-microsecond_measurements.pdf", "raw/sources/Reliability_analysis_of_CMOS_inverter_subjected_to_AC_amp_DC_NBTI_stresses.pdf", "raw/sources/Analysis_and_impacts_of_Negative_Bias_Temperature_Instability_NBTI.pdf", "raw/sources/A_new_oxide_trap-assisted_NBTI_degradation_model.pdf", "raw/sources/A_study_of_fluorine_dose_and_implant_energy_to_the_NBTI_upon_p_implant_sequence.pdf", "raw/sources/A_Comprehensive_Review_of_DRAM_NBTI_Issues_and_Solutions.pdf"]
+sources: ["raw/sources/Impact_of_Material_Variability_on_the_Reliability_of_Nanosheet_FETs.pdf", "raw/sources/Experimental_Study_on_NBTI_Degradation_Behaviors_in_Si_pMOSFETs_Under_Compressive_and_Tensile_Strains.pdf", "raw/sources/Delay_effects_and_frequency_dependence_of_NBTI_with_sub-microsecond_measurements.pdf", "raw/sources/Reliability_analysis_of_CMOS_inverter_subjected_to_AC_amp_DC_NBTI_stresses.pdf", "raw/sources/Analysis_and_impacts_of_Negative_Bias_Temperature_Instability_NBTI.pdf", "raw/sources/A_new_oxide_trap-assisted_NBTI_degradation_model.pdf", "raw/sources/A_study_of_fluorine_dose_and_implant_energy_to_the_NBTI_upon_p_implant_sequence.pdf", "raw/sources/A_Comprehensive_Review_of_DRAM_NBTI_Issues_and_Solutions.pdf", "raw/sources/Assessment_of_NBTI_in_Presence_of_Self-Heating_in_High-_k_SOI_FinFETs.pdf", "raw/sources/Deep_experimental_investigation_of_NBTI_impact_on_CMOS_inverter_reliability.pdf", "raw/sources/Degradation_and_Self-Recovery_of_Polycrystalline_Silicon_TFT_CMOS_Inverters_Under_NBTI_Stress.pdf", "raw/sources/Enhanced_PMOS_NBTI_degradation_due_to_halo_implant_channeling.pdf", "raw/sources/FinFET_NBTI_degradation_reduction_and_recovery_enhancement_through_hydrogen_incorporation_and_self-heating.pdf"]
+sources: ["raw/sources/Impact_of_Material_Variability_on_the_Reliability_of_Nanosheet_FETs.pdf", "raw/sources/Experimental_Study_on_NBTI_Degradation_Behaviors_in_Si_pMOSFETs_Under_Compressive_and_Tensile_Strains.pdf", "raw/sources/Delay_effects_and_frequency_dependence_of_NBTI_with_sub-microsecond_measurements.pdf", "raw/sources/Reliability_analysis_of_CMOS_inverter_subjected_to_AC_amp_DC_NBTI_stresses.pdf", "raw/sources/Analysis_and_impacts_of_Negative_Bias_Temperature_Instability_NBTI.pdf", "raw/sources/A_new_oxide_trap-assisted_NBTI_degradation_model.pdf", "raw/sources/A_study_of_fluorine_dose_and_implant_energy_to_the_NBTI_upon_p_implant_sequence.pdf", "raw/sources/A_Comprehensive_Review_of_DRAM_NBTI_Issues_and_Solutions.pdf", "raw/sources/Assessment_of_NBTI_in_Presence_of_Self-Heating_in_High-_k_SOI_FinFETs.pdf", "raw/sources/Deep_experimental_investigation_of_NBTI_impact_on_CMOS_inverter_reliability.pdf", "raw/sources/Degradation_and_Self-Recovery_of_Polycrystalline_Silicon_TFT_CMOS_Inverters_Under_NBTI_Stress.pdf", "raw/sources/Enhanced_PMOS_NBTI_degradation_due_to_halo_implant_channeling.pdf", "raw/sources/FinFET_NBTI_degradation_reduction_and_recovery_enhancement_through_hydrogen_incorporation_and_self-heating.pdf"]
 related: [["concepts/nanosheet-fet", "Nanosheet FET"], ["concepts/pbti", "PBTI"], ["concepts/strain-engineering", "Strain Engineering"], ["concepts/nbti-frequency-effect", "NBTI Frequency Effect"], ["concepts/ac-nbti", "AC NBTI"], ["concepts/soi-mosfet", "SOI MOSFET"], ["concepts/dram", "DRAM"]]
 ---
 
@@ -83,6 +84,36 @@ NBTI 是 p-FET 在**负栅极偏置 + 高温**条件下发生的时变可靠性 
 - **Retention time degradation**：64ms → 32ms 或更短
 - Write margin 和 read disturb 也会退化
 - 缓解方法：adaptive refresh、ECC、wear leveling
+
+## Self-Heating Effect on NBTI
+
+- **SOI/FinFET 结构**的热阻较高，自加热效应显著
+- 功率耗散导致沟道温度升高 20-40°C
+- 温度升高按 **Arrhenius 关系**加速 NBTI（每升高 10°C，速率翻倍）
+- High-k 介质与 SOI 结构结合时 NBTI 更敏感
+- 自加热与 NBTI recovery 产生复杂交互：高温加速降解但也加速恢复
+
+## CMOS Inverter Reliability
+
+- NBTI 导致 **PMOS Vth 正漂移**（~50mV @ 10yr）
+- **Switching threshold (V_M)** 向 NMOS 侧漂移（~30mV）
+- **Noise margin** 退化 10-15%
+- **Propagation delay** 增加 5-10%
+- Poly-Si TFT 呈现部分自恢复（70-80% 恢复率）
+
+## Halo Implant Channeling Effect
+
+- **Halo implant** 沿晶向通道注入时产生 **channeling 效应**
+- 非均匀掺杂分布引入局部 **compressive strain**
+- Compressive strain 降低 Si-H 键能 → NBTI 加剧
+- PMOS ΔVth **增加 30-50%** compared to non-channeling samples
+
+## Hydrogen Incorporation for NBTI Reduction
+
+- **H 钝化**：氢与硅悬挂键形成 Si-H 键，减少界面态
+- 效果：**ΔVth 降低 30-50%**
+- 与自加热协同：高温增强缺陷退火和空穴去捕获
+- Recovery 增强额外 **20-30%**
 
 ## Related
 - [[concepts/nanosheet-fet]] — Nanosheet 架构对此 degradation 的敏感性

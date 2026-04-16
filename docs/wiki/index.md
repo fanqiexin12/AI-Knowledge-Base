@@ -10,7 +10,7 @@ This wiki follows the three-layer architecture: **raw sources** (immutable) → 
 - [[entities/nb3sn]] — Nb₃Sn（铌三锡），Tc ≈ 18K，Hc2 ≈ 25-30T，14T+ MRI 磁体用高场超导体 — sources: 1
 - [[entities/nbti]] — NbTi（铌钛合金），Tc ≈ 9.5K，Hc2 ≈ 14T，MRI/NMR 磁体最广泛使用的超导体 — sources: 3
 
-## Concepts (21)
+## Concepts (22)
 - [[concepts/ac-nbti]] — AC NBTI：PMOS NBTI + NMOS PBTI 共同作用，VM 向 NMOS 侧漂移，duty cycle 影响退化分布 — sources: 2
 - [[concepts/circuit-aging]] — 电路老化：NBTI/PBTI/HCI/EM 导致 timing degradation，10年退化可达 10-20% — sources: 3
 - [[concepts/dram]] — DRAM（动态随机存取存储器）：1T1C 结构，NBTI 导致 retention time 退化，需 adaptive refresh — sources: 1
@@ -21,20 +21,20 @@ This wiki follows the three-layer architecture: **raw sources** (immutable) → 
 - [[concepts/hci]] — HCI（热载流子注入）：高 Vds 下热载流子注入氧化层，PD-SOI 中比 Bulk 更严重 — sources: 1
 - [[concepts/interconnect-reliability]] — 互联可靠性：EM/TDDB/应力迁移，7nm 节点电流密度 >10 MA/cm² — sources: 2
 - [[concepts/iter]] — ITER（国际热核聚变实验堆）：全球最大聚变项目，Q=10，tokamak 装置，超导磁体系统 — sources: 1
-- [[concepts/nbti]] — NBTI（负偏置温度不稳定性）：p-FET 负偏置高温退化；压应变恶化；DC > AC > 高频；SOI 有 history effect；GaN 有 free holes 机制；DRAM retention time 退化；oxide trap-assisted 模型 — sources: 17
+- [[concepts/nbti]] — NBTI（负偏置温度不稳定性）：p-FET 负偏置高温退化；压应变恶化；DC > AC > 高频；SOI 有 history effect；GaN 有 free holes 机制；DRAM retention time 退化；oxide trap-assisted 模型；self-heating 加剧；hydrogen incorporation 缓解 — sources: 22
 - [[concepts/nbti-frequency-effect]] — NBTI 频率效应：频率越高 NBTI 越弱（recovery 充足），f > 1 MHz 可忽略；DC 是 worst case — sources: 2
 - [[concepts/nbti-mitigation]] — NBTI 缓解技术：Gate Merging、Fluorine 注入、Adaptive Body Bias、Input Vector Control — sources: 3
 - [[concepts/nanosheet-fet]] — Nanosheet FET (GAA) 架构：3nm/2nm 节点主流，堆叠多层水平纳米片，4面栅极环绕 — sources: 2
 - [[concepts/on-chip-aging-sensor]] — 片上老化传感器：Ring Oscillator、Vth extraction 传感器，用于实时监测 NBTI 退化 — sources: 2
 - [[concepts/pbti]] — PBTI（正偏置温度不稳定性）：n-FET 正偏置高温退化，张应变恶化；AC NBTI 中 NMOS 也承受 PBTI — sources: 2
-- [[concepts/soi-mosfet]] — SOI MOSFET（PD-SOI/FD-SOI）：BOX 介质隔离，PD-SOI 有 floating-body 效应，HCI 更严重，NBTI 有 history effect — sources: 1
+- [[concepts/soi-mosfet]] — SOI MOSFET（PD-SOI/FD-SOI）：BOX 介质隔离，PD-SOI 有 floating-body 效应，HCI 更严重，NBTI 有 history effect，自加热加剧 NBTI — sources: 2
 - [[concepts/sram]] — SRAM（静态随机存取存储器）：6T 单元，高速缓存，BTI 影响 SNM 和 sense amplifier offset — sources: 2
-- [[concepts/strain-engineering]] — 应变工程：提升性能但与可靠性存在 tradeoff；NBTI/PBTI 响应相反 — sources: 1
+- [[concepts/strain-engineering]] — 应变工程：提升性能但与可靠性存在 tradeoff；NBTI/PBTI 响应相反；halo implant channeling 加剧 PMOS NBTI — sources: 2
 - [[concepts/superconducting-joint]] — 超导接头技术：零电阻连接，MRI 持久模式运行关键，Nb₃Sn/NbTi 扩散焊接 — sources: 2
 - [[concepts/variability-sources]] — 先进制程器件变异性来源：WFV/LER/MGG/厚度波动，RDD 在 7nm 节点显著 — sources: 2
 - [[concepts/wide-bandgap]] — 宽禁带半导体：GaN/SiC，带隙 3+ eV，高压/高温/高频应用 — sources: 1
 
-## Sources (26)
+## Sources (31)
 - [[sources/7nm-yield-reliability-challenges]] — 7nm 及以下良率和可靠性挑战：RDD/WFV/variability/EUV/EM 等多重挑战 — date: 2026-04-14
 - [[sources/9.2t-nbti-mri-magnet-design]] — 9.2T NbTi MRI 磁体设计研究：多线圈结构，±50ppm 均匀度，600mm 室温孔径 — date: 2026-04-14
 - [[sources/ac-nbti-coarse-graining-model]] — AC-NBTI 模型粗粒化方法：多时间尺度问题聚合快动力学变量，加速电路仿真 — date: 2026-04-14
@@ -66,10 +66,15 @@ This wiki follows the three-layer architecture: **raw sources** (immutable) → 
 - [[sources/oxide-trap-assisted-nbti-model]] — Oxide trap-assisted NBTI 模型：氧化层陷阱贡献显著；stretched exponential recovery；定量预测频率效应 — date: 2026-04-16
 - [[sources/soi-floating-body-nbti-hci]] — PD-SOI floating-body 效应：NBTI 有 history effect，HCI 比 Bulk 更严重 — date: 2026-04-14
 - [[sources/superconducting-connections-nbti-nbn]] — NbTi 超导连接：NbN paste + HNA 处理，Ic 从 10A 提升 — date: 2026-04-14
+- [[sources/nbti-self-heating-highk-soi-finfet]] — High-k SOI FinFET 自加热效应：BOX 热阻导致温度升高 20-40°C，Arrhenius 加速 NBTI — date: 2026-04-16
+- [[sources/deep-experimental-nbti-cmos-inverter-reliability]] — CMOS Inverter NBTI 可靠性：Vth 漂移 ~50mV，V_M 漂移 ~30mV，noise margin 退化 10-15% — date: 2026-04-16
+- [[sources/polysilicon-tft-cmos-inverter-nbti-self-recovery]] — Poly-Si TFT CMOS Inverter 自恢复：70-80% 降解可逆，晶界陷阱 + 界面态机制 — date: 2026-04-16
+- [[sources/halo-implant-channeling-enhanced-pmos-nbti]] — Halo implant channeling：引入局部压应变，NBTI 加剧 30-50% — date: 2026-04-16
+- [[sources/finfet-nbti-hydrogen-self-heating-recovery]] — FinFET 氢钝化 + 自加热恢复：H 注入减少 ΔVth 30-50%，自加热增强 recovery 20-30% — date: 2026-04-16
 
 ## Syntheses (0)
 _No syntheses yet. Ask questions to generate analyses._
 
 ## Recent Updates
-- **2026-04-16**: 5 new papers ingested — NBTI circuit impacts, oxide trap model, F dose/energy optimization, MuGFET fin width guideline, DRAM NBTI review. Updated NBTI/FinFET concept pages. New concept: DRAM.
+- **2026-04-16**: 5 new papers ingested — self-heating effect, CMOS inverter reliability, poly-Si TFT self-recovery, halo implant channeling, hydrogen incorporation. Updated NBTI/FinFET/SOI/Strain/Circuit-aging concept pages.
 - **2026-04-14**: Batch ingest 16 new papers (NBTI mechanisms, circuits, models, mitigation; GaN HEMT; interconnect reliability; superconductivity; SRAM; aging sensors; ITER)

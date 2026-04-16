@@ -34,6 +34,17 @@ Chronological record of wiki operations. Format: `## [YYYY-MM-DD] operation | de
 - Files touched: sources/nbti-frequency-dependence, sources/cmos-inverter-nbti-ac-dc, concepts/nbti-frequency-effect, concepts/ac-nbti, concepts/nbti (updated), index.md, log.md
 - Key findings: NBTI frequency dependence: f > 1 MHz negligible; DC is worst case; AC NBTI: PMOS NBTI + NMOS PBTI both contribute
 
+## [2026-04-16] ingest | 5 new papers (self-heating, inverter, halo implant, H incorporation)
+- Action: Created 5 source summaries; updated NBTI, FinFET, SOI MOSFET, Strain Engineering, Circuit Aging concept pages
+- New sources: nbti-self-heating-highk-soi-finfet, deep-experimental-nbti-cmos-inverter-reliability, polysilicon-tft-cmos-inverter-nbti-self-recovery, halo-implant-channeling-enhanced-pmos-nbti, finfet-nbti-hydrogen-self-heating-recovery
+- Updated concepts: nbti (added self-heating, CMOS inverter, halo implant, H incorporation sections), finfet (added self-heating, H incorporation), soi-mosfet (added self-heating), strain-engineering (added halo implant channeling), circuit-aging (added CMOS inverter aging)
+- Key topics:
+  - Self-heating in SOI/FinFET: 20-40°C temperature rise, accelerates NBTI by Arrhenius
+  - CMOS inverter NBTI: Vth shift ~50mV, V_M shift ~30mV, noise margin degradation 10-15%
+  - Poly-Si TFT self-recovery: 70-80% degradation reversible
+  - Halo implant channeling: compressive strain worsens NBTI 30-50%
+  - Hydrogen incorporation: ΔVth reduced 30-50%, enhanced recovery 20-30%
+
 ## [2026-04-16] ingest | 5 new papers
 - Action: Created 5 source summaries, updated NBTI and FinFET concept pages, created new DRAM concept
 - New sources: analysis-and-impacts-of-nbti, fluorine-dose-energy-nbti-pimplant, oxide-trap-assisted-nbti-model, fin-width-hc-nbti-mugfet, dram-nbti-review

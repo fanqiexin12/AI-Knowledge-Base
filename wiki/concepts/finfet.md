@@ -4,7 +4,7 @@ type: concept
 tags: [finfet, mugfet, mosfet, 3d-gate, multi-gate, semiconductor, advanced-nodes, short-channel-effect, fin-width]
 created: 2026-04-14
 updated: 2026-04-16
-sources: ["raw/sources/A_NBTI_tolerant_technique_for_FinFET_based_wide_fan-in_dynamic_logic.pdf", "raw/sources/A_Guideline_for_the_Optimum_Fin_Width_Considering_Hot-Carrier_and_NBTI_Degradation_in_MuGFETs.pdf"]
+sources: ["raw/sources/A_NBTI_tolerant_technique_for_FinFET_based_wide_fan-in_dynamic_logic.pdf", "raw/sources/A_Guideline_for_the_Optimum_Fin_Width_Considering_Hot-Carrier_and_NBTI_Degradation_in_MuGFETs.pdf", "raw/sources/Assessment_of_NBTI_in_Presence_of_Self-Heating_in_High-_k_SOI_FinFETs.pdf", "raw/sources/FinFET_NBTI_degradation_reduction_and_recovery_enhancement_through_hydrogen_incorporation_and_self-heating.pdf"]
 related: [["concepts/nbti", "NBTI"], ["concepts/hci", "HCI"], ["concepts/nanosheet-fet", "Nanosheet FET"]]
 ---
 
@@ -47,6 +47,19 @@ related: [["concepts/nbti", "NBTI"], ["concepts/hci", "HCI"], ["concepts/nanoshe
 - **3D 结构**：fin 侧壁和顶部都受栅极控制
 - **NBTI 效应**：fin 侧壁/顶部的 interface quality 可能不同
 - **Gate-all-around (GAA)** 是 FinFET 的进化方向 → 4 面栅极控制
+
+## Self-Heating Effect
+
+- **BOX (Buried Oxide)** 热导率低 → 热量积聚在沟道
+- 自加热导致温度升高 20-40°C
+- 温度升高 **按 Arrhenius 关系加速 NBTI**
+- High-k SOI FinFET 中 self-heating + NBTI 交互更复杂
+
+## Hydrogen Incorporation
+
+- **H passivation**：减少 interface traps
+- 效果：ΔVth 降低 30-50%
+- Self-heating 协同增强 recovery（额外 20-30%）
 
 ## Fin Width Optimization (MuGFET)
 

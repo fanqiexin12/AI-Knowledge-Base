@@ -3,8 +3,8 @@ title: "Strain Engineering in Semiconductor Devices"
 type: concept
 tags: [strain-engineering, semiconductor, performance, reliability, finfet, nanosheet, nbti, pbti]
 created: 2026-04-14
-updated: 2026-04-14
-sources: ["raw/sources/Experimental_Study_on_NBTI_Degradation_Behaviors_in_Si_pMOSFETs_Under_Compressive_and_Tensile_Strains.pdf"]
+updated: 2026-04-16
+sources: ["raw/sources/Experimental_Study_on_NBTI_Degradation_Behaviors_in_Si_pMOSFETs_Under_Compressive_and_Tensile_Strains.pdf", "raw/sources/Enhanced_PMOS_NBTI_degradation_due_to_halo_implant_channeling.pdf"]
 related: [["concepts/nbti", "NBTI"], ["concepts/pbti", "PBTI"], ["concepts/nanosheet-fet", "Nanosheet FET"]]
 ---
 
@@ -32,6 +32,12 @@ related: [["concepts/nbti", "NBTI"], ["concepts/pbti", "PBTI"], ["concepts/nanos
   - Compressive strain → Si-H 键能降低 → H 更容易释放 → NBTI 恶化
   - Tensile strain → Si-H 键能增大 → H 更难释放 → NBTI 减轻
 - **NBTI 和 PBTI 对应变的响应相反**
+
+### Halo Implant Channeling Effect
+- **Halo implant** 注入时沿晶向产生 channeling
+- Channeling 导致非均匀掺杂分布
+- 局部 compressive strain 增强 NBTI 30-50%
+-  Mitigation：使用 (100) 晶圆、注入角旋转、剂量优化
 
 ## Technology Node Evolution
 
