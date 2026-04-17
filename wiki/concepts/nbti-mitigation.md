@@ -3,8 +3,8 @@ title: "NBTI Mitigation Techniques"
 type: concept
 tags: [nbti, mitigation, reliability, circuit-design, process-engineering, fluorine, gate-merging]
 created: 2026-04-14
-updated: 2026-04-14
-sources: ["raw/sources/Gate_Merging_An_NBTI_Mitigation_Method_to_Eliminate_Critical_Internal_Nodes_in_Digital_Circuits.pdf", "raw/sources/NBTI_performance_enhancement_with_process_integration_of_High_Current_Fluorine_incorporation_and_O2_gas_asher_process_in_45nm_CMOS_technology.pdf", "raw/sources/A_NBTI_tolerant_technique_for_FinFET_based_wide_fan-in_dynamic_logic.pdf"]
+updated: 2026-04-16
+sources: ["raw/sources/Gate_Merging_An_NBTI_Mitigation_Method_to_Eliminate_Critical_Internal_Nodes_in_Digital_Circuits.pdf", "raw/sources/NBTI_performance_enhancement_with_process_integration_of_High_Current_Fluorine_incorporation_and_O2_gas_asher_process_in_45nm_CMOS_technology.pdf", "raw/sources/A_NBTI_tolerant_technique_for_FinFET_based_wide_fan-in_dynamic_logic.pdf", "raw/sources/papers-onedrive/NBTI_detection_methodology_for_building_tolerance_with_respect_to_NBTI_effects_employing_adaptive_body_bias.pdf", "raw/sources/papers-onedrive/Signal_probability_control_for_relieving_NBTI_in_SRAM_cells.pdf"]
 related: [["concepts/nbti", "NBTI"], ["concepts/circuit-aging", "Circuit Aging"], ["concepts/on-chip-aging-sensor", "On-Chip Aging Sensor"]]
 ---
 

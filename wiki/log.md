@@ -34,6 +34,19 @@ Chronological record of wiki operations. Format: `## [YYYY-MM-DD] operation | de
 - Files touched: sources/nbti-frequency-dependence, sources/cmos-inverter-nbti-ac-dc, concepts/nbti-frequency-effect, concepts/ac-nbti, concepts/nbti (updated), index.md, log.md
 - Key findings: NBTI frequency dependence: f > 1 MHz negligible; DC is worst case; AC NBTI: PMOS NBTI + NMOS PBTI both contribute
 
+## [2026-04-16] ingest | 13 new papers from OneDrive
+- Action: Created 13 source summaries; updated NBTI, SRAM, HCI, FinFET, DRAM, Circuit-aging, Superconducting-joint, On-chip-aging-sensor, NBTI-mitigation concept pages
+- New sources: nbti-35nm-cmos-digital-circuits, nbti-temporal-performance-degradation-digital-circuits, nbti-pbti-geoi-sram, zro2-hfo2-nbti-reliability, nb3hf-superconducting-joint, nbti-control-techniques-hkmg-dram, nbti-hci-separation-recovery, signal-probability-nbti-sram, reliable-cache-nbti-bist, nbti-hci-soi-pmosfet, pmos-nbti-minimization-robust-design, nbti-detection-adaptive-body-bias, hfo2-14nm-finfet-nbti-thermal-treatment, nbti-aware-sram-bit-line-voltage
+- Key topics:
+  - GeOI SRAM: higher mobility but more NBTI-sensitive, SNM fails at 10⁶s @ 125°C
+  - ZrO₂ vs HfO₂: k~25 vs k~20, ZrO₂ ΔVth 30-50% lower
+  - 35nm CMOS: 10yr delay increase 13-17%, RO freq degradation 8%
+  - Concurrent HCI-NBTI in SOI: synergistic factor 1.3-1.5x
+  - SRAM Signal Probability Control: data pattern optimization reduces NBTI 20-40%
+  - Adaptive Body Bias: lifetime extension 2-3x, power overhead <5%
+  - Cache BIST monitoring: lifetime extension 2-3x via data migration
+  - Nb₃Hf joint: Pb-free, R < 0.5nΩ, works at >12T
+
 ## [2026-04-16] ingest | 5 new papers (self-heating, inverter, halo implant, H incorporation)
 - Action: Created 5 source summaries; updated NBTI, FinFET, SOI MOSFET, Strain Engineering, Circuit Aging concept pages
 - New sources: nbti-self-heating-highk-soi-finfet, deep-experimental-nbti-cmos-inverter-reliability, polysilicon-tft-cmos-inverter-nbti-self-recovery, halo-implant-channeling-enhanced-pmos-nbti, finfet-nbti-hydrogen-self-heating-recovery

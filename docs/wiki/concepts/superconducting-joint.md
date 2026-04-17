@@ -3,8 +3,8 @@ title: "Superconducting Joint"
 type: concept
 tags: [superconductor, joint-connection, mri-magnets, persistent-mode, reliability]
 created: 2026-04-14
-updated: 2026-04-14
-sources: ["raw/sources/Superconducting_Connections_Between_NbTi_Thin_Films_With_NbN_Paste.pdf"]
+updated: 2026-04-16
+sources: ["raw/sources/Superconducting_Connections_Between_NbTi_Thin_Films_With_NbN_Paste.pdf", "raw/sources/papers-onedrive/Novel_Pb-Free_Superconducting_Joint_Between_NbTi_and_Nb3Sn_Wires_Using_High-Temperature-Tolerable_Superconducting_Nb3Hf_Intermedia.pdf"]
 related: [["entities/nbti", "NbTi"], ["entities/nbn", "NbN"], ["concepts/hta-hts", "HTS Materials"]]
 ---
 
@@ -47,6 +47,13 @@ related: [["entities/nbti", "NbTi"], ["entities/nbn", "NbN"], ["concepts/hta-hts
 2. **热膨胀系数 (CTE) 不匹配**：NbTi / solder / NbN 三者 CTE 不同 → 界面应力
 3. **机械稳定性**：高场 Lorentz 力可破坏接头
 4. **长期稳定性**：热循环、机械振动
+
+## Nb₃Hf Joint Technology
+
+- **Nb₃Hf 中间层**：高 Hc2 (~20-25T)，优于 NbTi
+- **无铅设计**：环境友好，避免 Sn-Pb 焊料
+- **工艺**：热等静压 (HIP) + 扩散退火
+- **性能**：接头电阻 < 0.5 nΩ，可工作于 >12T 磁场
 
 ## Related
 - [[entities/nbti]] — 最重要的 LTS 材料

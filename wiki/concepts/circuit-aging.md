@@ -4,7 +4,7 @@ type: concept
 tags: [circuit-aging, nbti, pbti, hci, reliability, timing-degradation, bti, lifetime]
 created: 2026-04-14
 updated: 2026-04-16
-sources: ["raw/sources/Gate_Merging_An_NBTI_Mitigation_Method_to_Eliminate_Critical_Internal_Nodes_in_Digital_Circuits.pdf", "raw/sources/Investigation_of_The_NBTI_and_PBTI_Effects_on_Multiplexer_Circuit_Performances.pdf", "raw/sources/BTI_impact_on_SRAM_sense_amplifier.pdf", "raw/sources/Deep_experimental_investigation_of_NBTI_impact_on_CMOS_inverter_reliability.pdf", "raw/sources/Degradation_and_Self-Recovery_of_Polycrystalline_Silicon_TFT_CMOS_Inverters_Under_NBTI_Stress.pdf"]
+sources: ["raw/sources/Gate_Merging_An_NBTI_Mitigation_Method_to_Eliminate_Critical_Internal_Nodes_in_Digital_Circuits.pdf", "raw/sources/Investigation_of_The_NBTI_and_PBTI_Effects_on_Multiplexer_Circuit_Performances.pdf", "raw/sources/BTI_impact_on_SRAM_sense_amplifier.pdf", "raw/sources/Deep_experimental_investigation_of_NBTI_impact_on_CMOS_inverter_reliability.pdf", "raw/sources/Degradation_and_Self-Recovery_of_Polycrystalline_Silicon_TFT_CMOS_Inverters_Under_NBTI_Stress.pdf", "raw/sources/papers-onedrive/Impact_of_NBTI_on_the_performance_of_35nm_CMOS_digital_circuits.pdf", "raw/sources/papers-onedrive/Impact_of_NBTI_on_the_temporal_performance_degradation_of_digital_circuits.pdf", "raw/sources/papers-onedrive/Modeling_and_minimization_of_PMOS_NBTI_effect_for_robust_nanometer_design.pdf"]
 related: [["concepts/nbti", "NBTI"], ["concepts/pbti", "PBTI"], ["concepts/hci", "HCI"]]
 ---
 
@@ -59,6 +59,12 @@ Aging(t) = A × exp(-E_a/kT) × V^n × (1 - exp(-t/τ))
 ```
 - **10 年 extrapolation**：加速测试后外推
 - **Worst-case corner**：高 V, 高 T, high switching activity
+
+### 35nm CMOS Data
+- **PMOS Vth shift**：~50mV @ 10yr, 125°C
+- **Circuit delay increase**：13-17% over 10 years
+- **Ring Oscillator freq. degradation**：~8% @ 10yr
+- **Recovery fraction**：25-40%（idle期间可恢复部分）
 
 ## Mitigation
 - [[concepts/nbti-mitigation]] — NBTI 缓解技术

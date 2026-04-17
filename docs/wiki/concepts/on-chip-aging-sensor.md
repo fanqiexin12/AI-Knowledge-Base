@@ -3,8 +3,8 @@ title: "On-Chip Aging Sensor"
 type: concept
 tags: [on-chip, aging-sensor, ring-oscillator, nbti, reliability-monitor, sensor, icn, bti-sensor]
 created: 2026-04-14
-updated: 2026-04-14
-sources: ["raw/sources/A_Simple_Monitor_for_Tracking_NBTI_in_Integrated_Systems.pdf", "raw/sources/Run_Time_V_th_Extraction_Based_On-Chip_NBTI_Mitigation_Sensor_for_6T_SRAM_Cell.pdf"]
+updated: 2026-04-16
+sources: ["raw/sources/A_Simple_Monitor_for_Tracking_NBTI_in_Integrated_Systems.pdf", "raw/sources/Run_Time_V_th_Extraction_Based_On-Chip_NBTI_Mitigation_Sensor_for_6T_SRAM_Cell.pdf", "raw/sources/papers-onedrive/Reliable_cache_design_with_on-chip_monitoring_of_NBTI_degradation_in_SRAM_cells_using_BIST.pdf"]
 related: [["concepts/nbti", "NBTI"], ["concepts/circuit-aging", "Circuit Aging"]]
 ---
 

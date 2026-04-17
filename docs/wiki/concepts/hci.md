@@ -3,8 +3,8 @@ title: "HCI (Hot Carrier Injection)"
 type: concept
 tags: [hci, hot-carrier-injection, reliability, mosfet, degradation, soi]
 created: 2026-04-14
-updated: 2026-04-14
-sources: ["raw/sources/Effect_of_Floating-Body_and_Stress_Bias_on_NBTI_and_HCI_on_65-nm_SOI_pMOSFETs.pdf"]
+updated: 2026-04-16
+sources: ["raw/sources/Effect_of_Floating-Body_and_Stress_Bias_on_NBTI_and_HCI_on_65-nm_SOI_pMOSFETs.pdf", "raw/sources/papers-onedrive/Separation_of_NBTI_component_from_channel_hot_carrier_degradation_in_pMOSFETs_focusing_on_recovery_phenomenon.pdf", "raw/sources/papers-onedrive/NBTI_and_Concurrent_HCI-NBTI_Degradation_of_65_nm_SOI_PMOSFETs.pdf"]
 related: [["concepts/nbti", "NBTI"], ["concepts/soi-mosfet", "SOI MOSFET"], ["concepts/strain-engineering", "Strain Engineering"]]
 ---
 
@@ -55,6 +55,18 @@ related: [["concepts/nbti", "NBTI"], ["concepts/soi-mosfet", "SOI MOSFET"], ["co
 - **短沟道效应**：Vds 增加 → 电场增强 → HCI 恶化
 - **Newer nodes**：HCI 在先进节点相对减轻（Vdd 降低），但 NBTI 变得更严重
 - **Lateral scaling**：沟道长度缩短 → 电场 E 增加 → HCI 风险上升
+
+## NBTI-HCI Separation & Concurrent Degradation
+
+### Separation Methods
+- **温度域**：NBTI 激活能 ~0.12 eV，HCI ~0.3 eV
+- **时间域**：NBTI 有 long-tail recovery，HCI 基本不可恢复
+- **Vds switching**：HCI 主要在高 Vds 时发生
+
+### Concurrent HCI-NBTI in SOI
+- PD-SOI 中 HCI 和 NBTI 同时存在时，**复合退化 > NBTI + HCI 之和**
+- 65nm SOI：concurrent stress ΔVth ~60-70mV，pure NBTI ~40mV
+- **协同因子**：1.3-1.5x
 
 ## Related
 - [[concepts/nbti]] — NBTI，另一种主要可靠性机制

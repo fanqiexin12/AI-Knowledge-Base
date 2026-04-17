@@ -4,7 +4,7 @@ type: concept
 tags: [dram, memory, nbti, retention, refresh, reliability]
 created: 2026-04-16
 updated: 2026-04-16
-sources: ["raw/sources/A_Comprehensive_Review_of_DRAM_NBTI_Issues_and_Solutions.pdf"]
+sources: ["raw/sources/A_Comprehensive_Review_of_DRAM_NBTI_Issues_and_Solutions.pdf", "raw/sources/papers-onedrive/Investigation_on_NBTI_Control_Techniques_of_HKMG_Transistors_for_Low-power_DRAM_applications.pdf"]
 related: [["concepts/nbti", "NBTI"], ["concepts/sram", "SRAM"]]
 ---
 
@@ -59,6 +59,14 @@ Word Line ──┬── Gate of Access FET
 - **Word-line boosting**: increase write voltage
 - **Fluorine incorporation**: process-level NBTI reduction
 - **Wear leveling** in memory controller
+
+## HKMG DRAM NBTI Control
+
+- **EOT scaling** 使 HKMG DRAM 的 NBTI 更敏感
+- **Fluorine注入** 可减少 ΔVth 30-50%，retention time 恢复接近 64ms
+- **Annealing优化**：减少界面态密度
+- **Channel掺杂profile**：Halo工程减少峰值电场
+- **Body bias控制**：动态调整补偿退化
 
 ## Related
 - [[concepts/nbti]] — NBTI mechanism

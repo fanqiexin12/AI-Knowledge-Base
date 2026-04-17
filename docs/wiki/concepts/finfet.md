@@ -4,7 +4,7 @@ type: concept
 tags: [finfet, mugfet, mosfet, 3d-gate, multi-gate, semiconductor, advanced-nodes, short-channel-effect, fin-width]
 created: 2026-04-14
 updated: 2026-04-16
-sources: ["raw/sources/A_NBTI_tolerant_technique_for_FinFET_based_wide_fan-in_dynamic_logic.pdf", "raw/sources/A_Guideline_for_the_Optimum_Fin_Width_Considering_Hot-Carrier_and_NBTI_Degradation_in_MuGFETs.pdf", "raw/sources/Assessment_of_NBTI_in_Presence_of_Self-Heating_in_High-_k_SOI_FinFETs.pdf", "raw/sources/FinFET_NBTI_degradation_reduction_and_recovery_enhancement_through_hydrogen_incorporation_and_self-heating.pdf"]
+sources: ["raw/sources/A_NBTI_tolerant_technique_for_FinFET_based_wide_fan-in_dynamic_logic.pdf", "raw/sources/A_Guideline_for_the_Optimum_Fin_Width_Considering_Hot-Carrier_and_NBTI_Degradation_in_MuGFETs.pdf", "raw/sources/Assessment_of_NBTI_in_Presence_of_Self-Heating_in_High-_k_SOI_FinFETs.pdf", "raw/sources/FinFET_NBTI_degradation_reduction_and_recovery_enhancement_through_hydrogen_incorporation_and_self-heating.pdf", "raw/sources/papers-onedrive/Study_on_NBTI_improvement_of_HfO2-based_14_nm_P-type_FinFET_with_post_high-k_deposition_thermal_treatment.pdf", "raw/sources/papers-onedrive/Improved_NBTI_reliability_with_sub-1-nanometer_EOT_ZrO2_gate_dielectric_compared_with_HfO2.pdf"]
 related: [["concepts/nbti", "NBTI"], ["concepts/hci", "HCI"], ["concepts/nanosheet-fet", "Nanosheet FET"]]
 ---
 
@@ -60,6 +60,18 @@ related: [["concepts/nbti", "NBTI"], ["concepts/hci", "HCI"], ["concepts/nanoshe
 - **H passivation**：减少 interface traps
 - 效果：ΔVth 降低 30-50%
 - Self-heating 协同增强 recovery（额外 20-30%）
+
+## High-k Dielectric Optimization
+
+### HfO2 Thermal Treatment
+- **Post high-k 热退火** 优化界面质量
+- 14nm FinFET：ΔVth 减少 20-30%
+- 机制：界面层再结晶、Hf-O键重组、促进H扩散
+
+### ZrO2 vs HfO2
+- **ZrO₂** (k~25) 比 **HfO₂** (k~20) NBTI表现更好
+- ZrO₂ ΔVth 比 HfO₂ 低 30-50%（氧空位缺陷密度更低）
+- 挑战：ZrO₂ 热稳定性需要工艺优化
 
 ## Fin Width Optimization (MuGFET)
 
